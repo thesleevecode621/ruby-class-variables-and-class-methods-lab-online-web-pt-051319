@@ -23,5 +23,7 @@ class Song
    def self.artist
      @@artist.uniq
    end
-   def 
+   def self.genre_count
+     genre_count = {}
+     genre_count.each do 
 end
