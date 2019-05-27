@@ -1,4 +1,26 @@
-ef self.genre_count
+class Song 
+  @@count = 0
+  
+  def self.count 
+    @@count
+  end 
+  
+ .
+  @@genres = []
+  
+
+  
+  def self.genres
+    @@genres.uniq
+  end
+  
+  
+  def self.genre_count
+    @@genres.inject(Hash.new(0)) { |total, i| total[i] += 1 ;total}
+  end 
+  
+  
+  def self.genre_count
     genre_count = {}
     @@genres.each do |genre|
       if genre_count[genre]
